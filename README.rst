@@ -13,14 +13,28 @@ Usage
 Usage is as follows: ::
 
 	xerox.copy(u'some string')
-	
+
 And to paste: ::
 
 	>>> xerox.paste()
 	u'some string'
-	
-And, that's it. 
 
+And, that's it.
+
+Command Line
+~~~~~~~~~~~~
+To copy: ::
+
+	xerox some string
+
+or: ::
+
+	echo some string | xerox
+
+To paste: ::
+
+	>>> xerox
+	some string
 
 Installation
 ------------
@@ -28,18 +42,18 @@ Installation
 To install Xerox, simply:
 
 	$ pip install xerox
-	
+
 Or, if you must:
 
 	$ easy_install xerox
-	
+
 Note: If you are installing xerox on Windows, you will also need to install the pywin32_ module.
 
 Legal Stuff
 -----------
 
-MIT License. 
+MIT License.
 
-(c\) 2010 Kenneth Reitz.
+(c\) 2012 Kenneth Reitz.
 
 .. _pywin32: http://sourceforge.net/projects/pywin32/files/

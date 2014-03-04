@@ -2,7 +2,8 @@
 tags
 .swo
 .DS_Store
-.*.pyc
+*.pyc
 *.scratch.*
 .svn
 .idea
+MANIFEST

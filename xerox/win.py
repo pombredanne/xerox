@@ -3,12 +3,12 @@
 
 # found @ http://code.activestate.com/recipes/150115/
 
-from base import * 
+from .base import * 
 
 try:
     import win32clipboard as clip
     import win32con
-except ImportError, why:
+except ImportError as why:
     raise Pywin32NotFound
 
 
@@ -17,7 +17,7 @@ def copy(string):
 
     clip.OpenClipboard()
     clip.EmptyClipboard()
-    clip.SetClipboardData(1, string) 
+    clip.SetClipboardData(win32con.CF_UNICODETEXT, string) 
     clip.CloseClipboard()
 
     return

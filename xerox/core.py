@@ -6,10 +6,13 @@ __author__ = 'Kenneth Reitz'
 __license__ = 'MIT'
 
 if sys.platform == 'darwin':
-    from darwin import *
+    from .darwin import *
     
-elif sys.platform == 'linux2':
-    from linux import *
+elif sys.platform.startswith('linux'):
+    from .linux import *
     
 elif sys.platform == 'win32':
-    from win import *
+    from .win import *
+
+elif sys.platform == 'cli':
+    from .cli import *
